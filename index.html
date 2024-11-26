@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="color: red; background-color: aqua;">Moon</h1>
+    <!-- for range -->
+     <label for="volume">Volume</label>
+     <input type="range" min="0" max="100" name="volume" step="10"/>
+     <ol type="A" start="3">
+        <li>Moon</li>
+        <li>Tuls</li>
+    </ol>
+
+    <form action="/main">
+        <input type="radio" name="fruit" id="apple" value="apple">Apple
+        <input type="radio" name="fruit" id="banana" value="banana">banana
+        <input type="radio" name="fruit" id="mango" value="mango">Mango
+        <br>
+        <input type="checkbox" name="fruit" id="apple" value="apple">Apple
+        <input type="checkbox" name="fruit" id="banana" value="banana">banana
+        <input type="checkbox" name="fruit" id="mango" value="mango">Mango
+
+        <br>
+            <label>Enter Username: </label>
+            <input type="text" placeholder="enter username">
+        </label>
+
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <table border="2px" cellspacing="4" cellpadding="10">
+        <caption>Student</caption>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Roll-no</th>
+                <th>Session</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td rowspan="2">Moon</td>
+                <td>22</td>
+                <td>2019</td>
+            </tr>
+
+            <tr>
+                <!-- <td>Tuls</td> -->
+                <td colspan="2">24</td>
+                <!-- <td>2019</td> -->
+            </tr>
+        </tbody>
+    </table>
+
+    <div>
+        <h1>Hiiii</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio cumque, <pre>
+            vero assumenda eveniet odit voluptatibus sapiente nobis eligendi, 
+            id veniam voluptates at alias mollitia itaque voluptatem laudantium veritatis nemo cupiditate!</pre></p>
+        <p>My name is Moon</p>
+
+        <button>Div</button>
+        <hr>
+
+        <h3>
+            <img src="moon.webp" alt="moon"><br>Moon 
+        </h3>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,46 @@
+h1{
+    color: blue;
+}
+
+/* input[type="radio"] {
+    display: none;
+} */
+
+input[type="text"]{
+    color:blueviolet;
+}
+
+/* Descendent Selector */
+div p{
+    color:brown;
+}
+
+/* Adjacent Sibling Combinator */
+h1 + p {
+    color:aqua;
+}
+ /* Child Combinator */
+div > pre{
+    line-height: 10px;
+    background-color: aquamarine;
+}
+/* Pseudo class */
+button:hover {
+    color:blueviolet;
+}
+/* pseudo element */
+h1::first-letter{
+    color:black;
+}
+
+pre::first-line{
+    color:red;
+}
+
+img{
+    width: 500px;
+    height: 500px;
+    align-content: center;
+    justify-content: center;
+    margin-left: 100px;
+}
