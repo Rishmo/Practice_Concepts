@@ -42,5 +42,66 @@ img{
     height: 500px;
     align-content: center;
     justify-content: center;
-    margin-left: 100px;
+    /* margin-left: 100px; */
+}
+
+div h3{
+    color: mediumorchid;
+    text-align: center;
+    border: 2px solid pink;
+    border-radius: 50px;
+    font-size:50px;
+    animation-name: Nfont;
+    animation-duration: 4s;
+}
+
+h2{
+    /* transform: scale(0.5);
+    transform: rotate(-45deg); */
+    /* transform: translate(80px, 80px); */
+    transform:skew(-45deg);
+}
+
+.flex{
+    display: flex;
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+    /* flex-direction: row-reverse; */
+
+    /* justify-content properties */
+
+    /* justify-content: start; */
+    /* justify-content: end; */
+    /* justify-content: center; */
+
+    /* justify-content: space-around; */
+    /* justify-content:space-between; */
+    /* justify-content: space-evenly; */ /* also gives space in start and end */
+
+    /* flex-wrap: nowrap; */
+    /* flex-wrap: wrap; */
+    /* flex-wrap: wrap-reverse; */
+
+    /* Align items properties */
+
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+    /* align-items: center; */
+
+    align-content: space-around;
+
+}
+
+/* for animation */
+@keyframes Nfont{
+    from{ font-size: 50px ;}
+    to { font-size: 100px; }
+}
+
+/* for responsiveness we use media query */
+
+@media only screen and (min-width: 400px){
+    body{
+        background-color: brown;
+    }
 }
