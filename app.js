@@ -98,3 +98,108 @@ console.log(clrs); //['White', 'Golden', 'Pink']
 let a= ["a", "b"];
 let ar = a;
 console.log(a === ar);
+
+console.log(clrs);
+for(let clr of clrs){
+    console.log(clr);
+}
+
+// Object Literal
+const student = {
+    name: "Moon",
+    Roll: 22,
+};
+student.name= "Tuls"; // updation
+console.log(student.name);
+
+// Random Integers
+
+let num=Math.random();
+console.log(num);
+
+// function
+
+function myName (name){ // function declaration with argument
+    console.log(name);
+}
+
+myName("Moon"); // function calling
+// Higher Order function
+function multipleGreet(func, n) {
+    for(let i=1; i<=n; i++){
+        func();
+    }
+}
+
+let greet = function() {
+    console.log("Hello");
+}
+
+multipleGreet(greet, 2);
+
+// methods
+
+const Calculator = {
+    add: function(a,b){
+        return a + b;
+    },
+
+    sub: function(a,b){
+        return (a - b);
+    },
+
+    mul: function(a,b){
+        return (a * b);
+    },
+
+    div: function(a,b){
+        return (a / b);
+    },
+
+    modulo: function(a,b){
+        return (a % b);
+    }
+};
+
+console.log(Calculator.add(1,2));
+
+// this keyword= it refers to an object that is executing the current piece of code
+
+const st ={
+    name: "Moon",
+    html: 99,
+    css: 95,
+    js: 90,
+    getAvg() {
+        let avg= (this.html + this.css + this.js)/3;
+        console.log(avg);
+    }
+};
+
+st.getAvg();
+
+// window.alert("Hello");
+
+// set timeout
+
+console.log("hi there!");
+setTimeout( () => {
+    console.log("Moon"); // after 4 sec it will execute
+}, 4000);
+console.log("Welcome");
+
+//set interval
+
+let id= setInterval(() => {
+    console.log("Moon");
+}, 2000); // it will execute the function again and again according to the time interval
+
+clearInterval(id); // to stop axecution of upper code
+
+let nums= [1,2,3,4,5,6,7,8];
+let even = nums.filter((nums) => {
+    return nums %2 == 0;
+});
+console.log(even);
+
+console.log([1, 2, 3].reduce((res,ele) => (res+ele))); // reduce method
