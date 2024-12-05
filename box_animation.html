@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Animation</title>
+    <style>
+        #container{
+            height: 400px;
+            width: 400px;
+            background-color: aqua;
+            border: 2px solid black;
+            border-radius:10px;
+            position: relative;
+        }
+
+        #inner{
+            height: 40px;
+            width: 40px;
+            background-color: rgb(2, 48, 48);
+            border: 2px solid rgb(212, 76, 76);
+            border-radius:10px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>Box Animation</h1>
+    <div id="container">
+        <div id="inner"></div>
+    </div>
+    <br>           
+    <button onclick="move()">Click me</button>
+
+    <script>
+        function move() {
+            let pos= 0;
+            const elem = document.getElementById("inner");
+            const id= setInterval(frame,10);
+            function frame(){
+                if(pos == 360){
+                    clearInterval(id);
+                }
+                pos++;
+                elem.style.top = pos+ 'px';
+                elem.style.left = pos++ + 'px';
+            }
+        }
+    </script>
+</body>
+</html>

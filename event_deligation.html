@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation</title>
+    <style>
+
+        body{
+            padding: 20px;
+            background-color:rgb(230, 25, 168);
+        }
+        div{
+            padding: 20px;
+            width: max-content;
+            background-color: aqua;
+            
+        }
+
+        span{ 
+            padding: 20px;
+            background-color: bisque;
+            display:block;
+        }
+        /* button{
+            padding: 20px;
+            background-color: blueviolet;
+        } */
+    </style>
+</head>
+<body>
+    <div>
+        <span>
+            <button> Click Me</button>
+        </span>
+    </div>
+
+    <script>
+        // const div =  document.getElementsByTagName('div')[0];
+        // div.addEventListener('click', (event) => {
+        //     if(event.target.tagName == 'BUTTON') { // tagName is always capital
+        //         console.log("Button is Clicked");
+        //     }
+
+        //     if(event.target.tagName == 'SPAN') { // tagName is always capital
+        //         console.log("Span is Clicked");
+        //     }
+
+        //     if(event.target.tagName == 'DIV') { // tagName is always capital
+        //         console.log("Div is Clicked");
+        //     }
+        // });
+
+        // dimensions
+
+        let a= document.querySelector('div');
+        console.log(a.getBoundingClientRect());
+    </script>
+</body>
+</html>

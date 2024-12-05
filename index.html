@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 style="color: red; background-color: aqua;">Moon</h1>
+    <h1 id="heading" style="color: red; background-color: aqua;">Moon</h1>
     <!-- for range -->
      <label for="volume">Volume</label>
      <input type="range" min="0" max="100" name="volume" step="10"/>
@@ -84,6 +84,30 @@
         <div>Div4</div>
         <div>Div5</div>
     </div>
+
+    <div id="myDiv">Selecting Elements</div>
+    <button onclick="changeText()">Change</button>
+
+    <div>
+        <h1>Names</h1>
+        <ul>
+            <li>Moon</li>
+            <li>Ravi</li>
+            <li>Tuls</li>
+            <li>Annu</li>
+            <li>Aas</li>
+        </ul>
+    </div>
+
+    <div id="myD" style="width: 100px; height: 100px; background-color: blueviolet; border: 2px dotted brown;">
+    </div>
+    <!-- <button onmouseenter="changeColor()">OnMouseEnter</button> -->
+    <button id="btn">OnMouseEnter</button>
+
+    <form>
+        Enter your Email: <input type="email" id="input" onfocus="onfun()" onblur="offfun()"/>
+    </form>
+
 
     <script src="app.js"></script>
     

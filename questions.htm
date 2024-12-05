@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Questions</title>
+</head>
+<body>
+    <h1>Interview questions</h1>
+    <p>Hello! Myself <b>Moon Sahu</b></p>
+    <div id="container"></div>
+
+    <script>
+        console.log("Q1")
+        console.log("Function to calculate area of a rectangle");
+        function rectangle(l,b){
+            return l * b;
+        }
+        console.log(`Area of rectangle= ${rectangle(3, 6)}`);
+
+
+        console.log('Q2');
+        console.log("Reverse String");
+        let str ="Moon";
+        function reverseString(str){
+            return str.split("").reverse().join("");
+        }
+        console.log(reverseString(str));
+
+
+        console.log('Q3');
+        console.log("Function for even or add");
+        function evenOdd(n){
+            if(n%2 == 0){
+                console.log(`${n} is even`);
+            }
+            else{
+                console.log(`${n} is odd`);
+            }
+        }
+        console.log(evenOdd(514));
+
+
+        console.log('Q4');
+        console.log("Leap Year");
+        function leapYear(year){
+            if(year % 4 === 0 && year % 100 !== 0 || year % 400 ===0){
+                return `${year} is leap year`;
+            }
+            else{
+                return `${year} is not a leap year`;
+            }
+        }
+        console.log(leapYear(2024));
+
+
+        console.log('Q5');
+        console.log("Sum of all elements of an array");
+
+        let arr= [1,2,43,6,8];
+        let sum= 0;
+        for(let i=0; i<arr.length; i++){
+            sum+= arr[i];
+        }
+        console.log(sum);
+
+
+        console.log('Q6');
+        console.log("Create an object and add a method");
+       let car ={
+        make: "BMW",
+        year: 2024
+       }
+       car.startEngine = function(){
+        console.log("Engine Started");
+       }
+       console.log(car.startEngine);
+       console.log(car);
+
+
+        console.log('Q7');
+        console.log("Dom Manipulation for Text change");
+        let para = document.getElementsByTagName('p');
+        console.log(para);
+        para.textContent = "This text has been changed using DOM Manipulation";
+
+
+        console.log('Q8');
+        console.log("Create Button dynamically");
+        let container = document.getElementById('container');
+        let btn = document.createElement("button");
+        btn.textContent = "Click me"
+        container.appendChild(btn);
+
+
+        console.log('Q9');
+        console.log("find Factorial");
+
+        function factorial(n){
+            let fact=1;
+            for(let i=1; i<=n; i++){
+                fact = fact*i;
+            }
+            return fact;
+        }
+        console.log(`Factorial of 5 is ${factorial(5)}`);
+
+
+        console.log('Q10');
+        console.log("Random Number");
+
+        function getRandomNumber(min,max) {
+            return Math.floor(Math.random()*(max-min +1)) +min;
+        }
+
+        console.log(getRandomNumber(1,8));
+
+
+        console.log('Q11');
+        console.log("Returns new array with even numbers");
+        let array=[1, 3, 5, 7, 8, 4, 45, 5, 44]
+        let even =array.filter((array) => (array %2 === 0));
+        console.log(even);
+
+
+        console.log('Q12');
+        console.log("Use map to double all elements in array");
+
+        let ar=[1, 3, 5, 7, 8, 4]
+        let double =ar.map(function(e){
+            return  e*2;
+        });
+        console.log(double);
+
+
+        console.log('Q13');
+        console.log("Find Largest using reduce()");
+        let a=[3,6,3,68,9];
+        let max = a.reduce((max,el) => {
+            if(max<el){
+                return el;
+            }
+            else{
+                return max;
+            }
+        });
+        console.log(max);
+
+
+        console.log('Q14');
+        console.log("Remove all occurrences of a specific element from an array");
+        function removeElementFromArray(){
+            return ary.filter(item => item !== target);
+        }
+        let ary = [10,23,45,6,6,45,10,10,6];
+        let target = 6;
+        let remove = removeElementFromArray(ary,target);
+        console.log(remove);
+
+
+        console.log('Q15');
+        console.log("Display current date and time in a specified formate");
+        function getCurrentDateAndTime(){
+            let currentDate = new Date();
+            return currentDate.toLocaleString();
+        }
+        console.log(getCurrentDateAndTime());
+        //console.log(new Date());
+
+
+        console.log('Q16');
+        console.log("Implement a try- catch block to handle an error that occurs during API data fetching");
+        // async function fetchData(){
+        //     try{
+        //         let response = await fetch("https://jsonplaceholder.typicode.com/posts");
+        //         let data = await response.json();
+        //         console.log(data);
+        //     }
+        //     catch(error){
+        //         console.log("Error fetching Data: " +error);
+        //     }
+        // }
+        // fetchData();
+
+
+        console.log('Q17');
+        console.log("Recursive function to calculate factorial");
+        function recursiveFactorial(n){
+            if(n === 1){
+                return 1;
+            }
+            else{
+                return n*(factorial(n-1));
+            }
+        }
+        console.log(recursiveFactorial(5));
+
+
+        console.log('Q18');
+        console.log("Recursive function to find nth fibonacci number");
+
+        function fibonacci(n){
+            if(n<=1){
+                return n;
+            }
+            else{
+                return fibonacci(n-1)+fibonacci(n-2);
+            }
+
+        }
+        console.log(fibonacci(5));
+
+
+        console.log('Q19');
+        console.log("Create a counter function using closures that increments and returns the count on each call");
+        function createCounter(){
+            let count = 0;
+            return function(){ // clouser function (it will go to its lexical scope and search count )
+                return ++count;
+            }
+        }
+        //console.log(createCounter());
+        let counter = createCounter();
+        console.log(counter());
+        console.log(counter());
+        console.log(counter());
+
+
+        console.log('Q20');
+        console.log("Implement private variable using clouser");
+        function createCount(){
+            let count =0; // Private Variable
+
+            // inner function (Clouser)
+            function increment(){
+                count++;
+                console.log("Count: ", count)
+            }
+
+            return{
+                incrementCounter: function(){
+                    increment();
+                },
+                getCount: function(){
+                    return count;
+                }
+            }
+        }
+
+        const ctr = createCount();
+        ctr.incrementCounter();
+        console.log(ctr);
+
+
+        console.log('Q21');
+        console.log("Create a prtotype for a Product object with properties like name, price, and quantity.Add a method to the Product prototype to calculate the total value");
+        function Product(name,price,quantity){
+            this.name = name;
+            this.price =  price;
+            this.quantity = quantity;
+        }
+        Product.prototype.calculateTotalValue = function(){
+            return this.price * this.quantity
+        }
+        const product1= new Product("Widget", 10, 5);
+        const totalValue1= product1.calculateTotalValue();
+        console.log(`Total value of ${product1.name}: $${totalValue1}`);
+        console.log(Product.prototype);
+        
+    </script>
+</body>
+</html>

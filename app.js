@@ -203,3 +203,38 @@ let even = nums.filter((nums) => {
 console.log(even);
 
 console.log([1, 2, 3].reduce((res,ele) => (res+ele))); // reduce method
+
+//DOM
+
+function changeText() {
+    // Get the element by its id
+    var element = document.getElementById("myDiv");
+
+    // Change the content of the element
+    element.innerHTML = "Text has been changed!";
+}
+
+
+// Selectors
+
+var n= document.getElementsByTagName('li');
+console.log(n);
+
+document.getElementById('btn').addEventListener("click", fun);
+function fun(){
+    document.getElementById("myD").style.backgroundColor = "black";
+    console.log("Button is pressed");
+}
+
+// function changeColor() {
+//     document.getElementById("myD").style.backgroundColor = "red";
+// }
+
+let input= document.getElementById("input");
+
+        function onfun(){
+            input.style.backgroundColor = "red";
+        }
+        function offfun(){
+            input.style.backgroundColor = "blue";
+        }
